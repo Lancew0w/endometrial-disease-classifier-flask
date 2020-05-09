@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="基于 AI 的子宫内膜疾病分型分期评价系统">
+    <meta name="author" content="lancew0w">
+
+    <title>基于 AI 的子宫内膜疾病分型分期评价系统</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href='{{ url_for('static',filename='jumbotron.css') }}' rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">本系统仅供测试
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h2>基于 AI 的子宫内膜疾病分型分期评价系统</h2>
+        <p> 对子宫内膜癌的精准分型分期对于患者至关重要，术前分析可尽可能帮助年轻患者保留生育能力，术中分析可大大降低手术的风险，术后病理比对分析可为患者术后辅助治疗提供指导。本项目基于患者生理状态、术前肿瘤标记物以及病灶图像信息采集，用机器学习的方法进行数据筛选，建立子宫内膜癌分型分期评分标准。</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">查看论文 &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-3">
+          <h2>单条数据测试</h2>
+          <p> 使用默认模型或者个性化模型对数据进行预测，在线获取结果。 </p>
+          <p><a class="btn btn-default" href="single_test" role="button">立即测试 &raquo;</a></p>
+        </div>
+        <div class="col-md-3">
+          <h2>上传测试数据集</h2>
+          <p> 使用默认模型或者个性化模型对数据进行预测，根据您的数据量大小，等待一段时间后可获得最终结果，您上传的数据必须符合数据格式要求。 </p>
+          <p><a class="btn btn-default" href="upload_test" role="button">立即上传 &raquo;</a></p>
+        </div>
+        <div class="col-md-3">
+          <h2>上传训练数据集</h2>
+          <p> 默认模型为某医院 1000 条左右的子宫内膜疾病分型分期数据，您可以上传符合数据规则的个性化数据集来提高准确性，您上传的数据必须符合数据格式要求。 </p>
+          <p><a class="btn btn-default" href="upload_train" role="button">立即上传 &raquo;</a></p>
+       </div>
+        <div class="col-md-3">
+          <h2>相关文件下载</h2>
+          <p> 训练集等数据集采用类似的数据格式，为了避免出现无法预测的情况，请务必检查上传的数据集格式。</p>
+          <p><a class="btn btn-default" href="{{url_for('static', filename='template.csv')}}" role="button">下载数据格式模板 &raquo;</a></p>
+          <p><a class="btn btn-default" href="{{url_for('static', filename='train.csv')}}" role="button">下载当前训练集数据 &raquo;</a></p>
+          <p><a class="btn btn-default" href="{{url_for('static', filename='model.pkl')}}" role="button">下载当前模型文件 &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; 2020 SJTU</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../static/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

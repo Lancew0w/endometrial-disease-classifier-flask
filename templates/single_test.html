@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="基于 AI 的子宫内膜疾病分型分期评价系统">
+    <meta name="author" content="Lianlong">
+
+    <title>单条数据测试</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href='{{ url_for('static',filename='jumbotron.css') }}' rel="stylesheet">
+
+  </head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">本系统仅供测试
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+    <h1></h1>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-3">
+          <h2>单条数据测试</h2>
+            <p> 请填写相关数据：</p>
+            <form action="" enctype='multipart/form-data' method='POST'>
+                    <label for="fs">腹水</label>
+                    <select class="form-control" name="fs">
+                      <option value="1">无腹水</option>
+                      <option value="2">有腹水</option>
+                    </select>
+                <br>
+
+                    <label for="dx">大小</label>
+                        <input name='dx' type="text" class="form-control" placeholder="请输入浮点数">
+                <br>
+                    <label for="cj">前后两次产检比较</label>
+                        <input name='cj' type="text" class="form-control" placeholder="请输入浮点数">
+                <br>
+                    <label for="xl">血流信号</label>
+                    <select name="xl" class="form-control">
+                      <option value="1">有信号</option>
+                      <option value="2">无信号</option>
+                    </select>
+                <br>
+
+                    <label for="zl">肿瘤个数</label>
+                    <select name="zl" class="form-control">
+                      <option value="1">1个</option>
+                      <option value="2">2个</option>
+                      <option value="3">3个</option>
+                    </select>
+                <br>
+
+                    <label for="hs">回声</label>
+                    <select name="hs" class="form-control">
+                      <option value="1">低回声</option>
+                      <option value="2">混合回声</option>
+                      <option value="3">高回声</option>
+                    </select>
+                <br>
+
+                    <label for="nb">囊壁</label>
+                    <select name="nb" class="form-control">
+                      <option value="1">光滑</option>
+                      <option value="2">有乳头结果</option>
+                    </select>
+                <br>
+
+                    <label for="fg">有无分隔</label>
+                    <select name="fg" class="form-control">
+                      <option value="1">单房</option>
+                      <option value="2">多房</option>
+                    </select>
+                <br>
+
+                    <label for="bj">边界</label>
+                    <select name="bj" class="form-control">
+                      <option value="1">清晰</option>
+                      <option value="2">欠清晰</option>
+                      <option value="3">不清晰</option>
+                    </select>
+                <br>
+
+                <input type="submit" class="btn btn-success" value="提交">
+            </form>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

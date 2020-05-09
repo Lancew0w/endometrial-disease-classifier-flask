@@ -1,0 +1,6 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Microsoft Yahei",Arial,Verdana,sans-serif;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
